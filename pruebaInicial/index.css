@@ -1,3 +1,7 @@
+.control {
+    padding-bottom: 20px;
+}
+
 #add_product {
     padding: 5px;
     width: 250px;
