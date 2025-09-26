@@ -2,7 +2,7 @@
 ## Introducción
 **¿Qué es el pensamiento visual?**
 
-El *pensamiento visual* es una herramienta para exponer, presentar, transmitir o comunicar las ideas mediante dibujos sencillos y de fácil reconocimiento.
+> El *pensamiento visual* es una herramienta para exponer, presentar, transmitir o comunicar las ideas mediante dibujos sencillos y de fácil reconocimiento.
 
 Para realizar el diseño de la interfaz, se deben hacer varios puntos:
 1. Estudio previo de las características propias del sitio
@@ -10,7 +10,7 @@ Para realizar el diseño de la interfaz, se deben hacer varios puntos:
 3. Patrón de colores característicos
 4. Ubicación de cada uno de los componentes
 ## Interacción Persona - Ordenador (IPO)
-Es la disciplina que estudia el intercambio de información entre las personas y los ordenadores.
+> Es la disciplina que estudia el intercambio de información entre las personas y los ordenadores.
 
 ***OBJETIVO:*** el intercambio de información debe ser lo más eficiente posible, es decir, que se incremente la satisfacción del usuario de un sitio web y su experiencia de uso para que desee volver a este.
 
@@ -26,7 +26,7 @@ Hay estudios que demuestran:
 1. El 48% del código de una aplicación está dedicado a la interfaz (Estudio **Myers y Rosson [MYE92]**)
 2. El 80% de los costes de mantenimiento de una aplicación son debidos a problemas del usuario con el sistema y aproximadamente el 64% son por problemas de usabilidad.
 ## Diseño de la interfaz
-Una **interfaz** es un conjunto de elementos gráficos y un diseño de su distribución que permite una mejor presentación y navegación a través de la aplicación.
+> Una **interfaz** es un conjunto de elementos gráficos y un diseño de su distribución que permite una mejor presentación y navegación a través de la aplicación.
 
 Hay cuatro grupos de elementos en el **diseño de interfaces**:
 - Elementos conceptuales (no visibles)
@@ -40,7 +40,7 @@ El diseño debe responder una de las cuestiones más importantes en este ámbito
 
 **Diferencia entre *UX* y *UI***
 
-La UX o User Experience responde a cómo el usuario se siente mientras usa cualquier producto o servicio digital que tu empresa ofrece, en cambio, la UI o User Interface responde a la guía de usuarios por la navegación y los llevará a tomar dichas acciones de manera natural.
+> La UX o User Experience responde a cómo el usuario se siente mientras usa cualquier producto o servicio digital que tu empresa ofrece, en cambio, la UI o User Interface responde a la guía de usuarios por la navegación y los llevará a tomar dichas acciones de manera natural.
 ## Fases del desarrollo de una interfaz
 ### Análisis de requisitos
 Un software es de calidad si cumple con todos los requisitos definidos.
@@ -66,3 +66,58 @@ Algunas tareas pueden ser:
 - **Definir un *estilo* y una *estrategia* de diseño de la información** (estándares, metáforas, diseño gráfico, etc)
 - **Diseño detallado**
 ### Prototipado
+Desde el inicio del desarrollo debemos probar partes del sistema con multitud de objetivos:
+1. **Verificar funcionalidades**
+2. **Averiguar aspectos relacionados con la interfaz del sistema** (posición de controles, textos, colores, etc)
+3. **Validar la navegación**
+4. **Probar nuevas posibilidades técnicas**
+5. etc.
+
+Gracias al prototipado se permiten realizar este tipo de verificaciones y que el usuario pueda participar en el desarrollo.
+### Implementación
+Esta parte suele ser a la que se destinen más recursos personales ya que es recomendable realizar prototipos software para evaluarlos con los usuarios finales.
+
+Además, también es recomendable realizar una evaluación para comprobar la consistencia global del producto antes de su puesta en marcha, teniendo en cuenta la **usabilidad** ya que la **accesibilidad** se puede conseguir con poco esfuerzo adicional a la codificación habitual.
+### Lanzamiento
+El éxito de un producto depende de dos factores:
+1. **Que el usuario se sienta cómodo con el sistema** (usabilidad y accesibilidad)
+2. **Que los responsables obtengan los resultados esperados** (funcionalidad)
+
+Es importante tener constante feedback con el usuario.
+### Evaluación
+> La evaluación es el conjunto de metodologías y técnicas que analizan la usabilidad y la accesibilidad del sistema en diferentes etapas del ciclo de vida.
+
+Es un punto clave del modelo ya que permite recibir la retroalimentación  por parte del usuario y/o evaluadores expertos que se verá reflejada en el diseño de las interfaces.
+## La accesibilidad
+> La **accesibilidad web** consiste en desarrollar aplicaciones web que puedan ser utilizadas por el mayor número de usuarios con necesidades específicas.
+
+Estas necesidades pueden ser debidas a limitaciones **derivadas del entorno** (navegadores antiguos, conexiones lentas, etc) o **derivadas de problemas visuales, auditivos, motrices y neurológicos** (dislexia, trastornos de la atención, etc).
+
+> Las **pautas de accesibilidad** para el Contenido en la Web (*Web Content Accessibility Guidelines o WCAG*) son un conjunto de directrices desarrolladas por el **Word Wide Web Consortium** (W3C) que establecen estándares para mejorar la accesibilidad de los sitios web.
+
+Alguna de estas pautas son:
+1. **Perceptible:** capacidad de presentar la información y contenido
+2. **Operable:** se centra en las funcionalidades y componentes
+3. **Comprensible:** se centra en la claridad y comprensión, buscando la facilidad
+4. **Robusto:** compatible con diferentes tecnologías y dispositivos.
+## La usabilidad
+> La **usabilidad** se refiere a la capacidad de un sitio web, aplicación o producto digital para ser fácil de usar y comprender por los usuarios.
+
+Los sitios con buena *usabilidad* presentan:
+- Navegación clara
+- Estructura lógica de información
+- Disposición de elementos facilitando las tareas
+
+### Tipos de pruebas de usabilidad
+1. **Pruebas de usuario:** se invita a usuarios reales a utilizar el producto o sitio web y se les pide que realicen tareas específicas
+2. **Pruebas de tiempo de respuesta:** miden el tiempo que tarda un usuario en realizar la tarea. Mide la eficiencia y velocidad del producto
+3. **Prueba eye-tracking:** con tecnologías de seguimiento ocular se pueden evaluar hacia donde miran los usuarios para captar su atención
+4. **Pruebas A/B:** pruebas con diferentes versiones para determinar cuál es la más efectiva
+## Guía de estilos
+> Recogen los criterios y normas que deben seguir los desarrolladores de un sitio web para conseguir una apariencia uniforme y atractiva para el usuario.
+> 
+> Además, favorecen el desarrollo de una página web, tanto en el diseño como en su posterior mantenimiento.
+
+***IMPORTANCIA DE LAS GUÍAS DE ESTILOS***
+
+==aDF==
