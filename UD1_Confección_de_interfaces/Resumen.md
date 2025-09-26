@@ -120,4 +120,48 @@ Los sitios con buena *usabilidad* presentan:
 
 ***IMPORTANCIA DE LAS GUÍAS DE ESTILOS***
 
-==aDF==
+Para asegura la consistencia de las interfaces gráficas de una web es fundamental plasmar las pautas de estilo en una guía que pueda seguir el equipo de desarrollo (programadores, analistas, diseñadores gráficos, etc) durante el proceso de desarrollo del sitio.
+
+En esta, generalmente se recogen:
+1. Gama de colores
+2. Iconos
+3. Tipografía
+4. Tamaño de letras
+5. Logo
+### Los colores
+> La **teoría del color** es un conjunto de principios y directrices que pueden ayudar a los diseñadores a elegir y combinar colores de manera efectiva en sus proyectos, incluyendo el diseño web.
+
+Además de esto, es importante conocer la identidad de la marca, la audiencia y las preferencias personales al tomar decisiones sobre los colores.
+1. **Círculo cromático:** elegir y combinar colores de manera efectiva
+2. **Armonía de colores:** combinación de colores de manera que sean visualmente atractivos y equilibrados
+3. **Contraste:** diferencia visual entre dos o más elementos
+4. **Psicología del color:** transmitir emociones y provocar así reacciones en nuestro cerebro
+### Tipografía
+Los textos son la base de la mayoría de los sitios web ya que lo más normal es transmitir la información mediante letras.
+
+A la hora de elegir un tipo de tipografía es muy importante verificar si puede visualizarse correctamente en los distintos navegadores y no abusar de negrita, cursiva y subrayado.
+## Prototipado
+> El **diseño conceptual** de una web está formado por representaciones de las páginas y secciones que van a componer el sitio.
+> 
+> Las *fases del prototipado* sirven para definir los procesos, realizar cambios y pruebas antes de subir a producción una aplicación web.
+
+### Sketch
+> Un **sketch** es un dibujo o boceto inicial de un sitio web.
+
+Este boceto estará realizado sobre papel, pizarra o cualquier formato que permita realizar modificaciones de manera rápida.
+
+Es un diseñó poco detallado donde se visualiza por primera vez el conjunto de elementos fundamentales de una web.
+### Wireframe
+> Un **wireframe** es la representación de la estructura básica de la página web en la que se especifican los elementos de forma esquematizada.
+
+Es un diseño a bajo nivel que se establece claramente la jerarquía de los elementos, los contenedores y la organización del contenido.
+### Mockup
+> Un **mockup** es una representación a medio nivel que se incluyen imágenes, tipografías y colores, aunque no tiene por qué ser definitivos.
+
+La finalidad del mockup es conseguir una versión avanzada del diseño de la web que nos permita evaluarlo en su conjunto, la detección temprana de puntos débiles y la realización de cambios sin que sea demasiado costosa.
+### Prototipado
+> El **prototipado** es la representación más detallada de la web y dispone de interactividad para comprobar el comportamiento y la experiencia de usuario.
+
+Por norma general, los colores, tipografías, iconos y demás elementos gráficos son los que se utilizará en la página web.
+
+***(Cuando esté el resumen que hagamos en clase, pondré una imagen aquí)***
