@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
+    <title>theory-app</title>
+  </head>
+  <body class="h-screen flex items-center justify-center bg-[url('/public/background.jpg')]">
+    <div class="flex flex-col bg-azul-claro/40 p-20 items-center justify-center rounded-xl">
+      <img src="public/person-circle.svg" alt="Icono persona" class="w-2/6">
+      
+      <div class="my-5">
+        <div class="border-2 flex rounded border-azul-oscuro mb-3">
+          <img src="public/person-fill.svg" alt="" class="p-2">
+          <input type="text" placeholder="Username" class="placeholder-azul-oscuro">
+        </div>
+
+        <div class="border-2 flex rounded border-azul-oscuro w-auto">
+          <img src="public/shield-lock-fill.svg" alt="" class="p-2">
+          <input type="text" placeholder="Password" class="w-auto placeholder-azul-oscuro">
+          <img src="public/eye-slash-fill.svg" alt="" class="p-2">
+        </div>
+      </div>
+
+      <div class="flex items-center">
+        <input type="checkbox" name="remember" id="remember" checked>
+        <label for="remember" class="text-xs mr-15 ml-2 text-azul-oscuro">Remember me</label>
+
+        <a href="#" class="text-xs text-azul-oscuro">Forgot password?</a>
+      </div>
+
+      <div>
+        <button class="bg-azul-oscuro w-60 mt-5 text-2xl text-white rounded">LOGIN</button>
+      </div>
+    </div>
+  </body>
+</html>
