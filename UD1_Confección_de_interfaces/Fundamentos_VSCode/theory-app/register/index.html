@@ -18,24 +18,21 @@
           <input type="text" placeholder="Username" class="placeholder-azul-oscuro focus:ring-0 focus:outline-none">
         </div>
 
+        <div class="border-2 flex rounded border-azul-oscuro w-auto mb-3">
+          <img src="/public/shield-lock-fill.svg" alt="" class="p-2">
+          <input type="password" placeholder="Password" id="passwd1" class="w-auto placeholder-azul-oscuro focus:ring-0 focus:outline-none">
+          <input type="image" id="eye1" src="/public/eye-fill.svg" alt="" class="p-2" onclick="password1()">
+        </div>
+
         <div class="border-2 flex rounded border-azul-oscuro w-auto">
           <img src="/public/shield-lock-fill.svg" alt="" class="p-2">
-          <input type="password" placeholder="Password" id="passwd" class="w-auto placeholder-azul-oscuro focus:ring-0 focus:outline-none">
-          <input type="image" id="eye" src="/public/eye-fill.svg" alt="" class="p-2" onclick="password()">
+          <input type="password" placeholder="Repeat Password" id="passwd2" class="w-auto placeholder-azul-oscuro focus:ring-0 focus:outline-none">
+          <input type="image" id="eye2" src="/public/eye-fill.svg" alt="" class="p-2" onclick="password2()">
         </div>
       </div>
 
-      <div class="flex items-center">
-        <input type="checkbox" name="remember" id="remember" checked>
-        <label for="remember" class="text-xs mr-15 ml-2 text-azul-oscuro">Remember me</label>
-
-        <a href="#" class="text-xs text-azul-oscuro">Forgot password?</a>
-      </div>
-
-      <a href="../register/index.html" class="text-xs text-azul-oscuro ml-36 mt-2">Don't have account?</a>
-
       <div>
-        <button class="bg-azul-oscuro w-60 mt-5 text-2xl text-white rounded">LOGIN</button>
+        <button class="bg-azul-oscuro w-60 mt-5 text-2xl text-white rounded" >REGISTER</button>
       </div>
     </div>
   </body>
