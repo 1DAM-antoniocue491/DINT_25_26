@@ -35,3 +35,16 @@ function password2() {
         document.getElementById("eye2").src = "http://localhost:5173/public/eye-fill.svg";
     }
 }
+
+function submit() {
+    const user = document.getElementById("user");
+    const passwd1 = document.getElementById("passwd1");
+    const passwd2 = document.getElementById("passwd2");
+
+    if (passwd1.value === passwd2.value) {
+        alert("Las contraseñas indicadas no son válidas");
+    } else {
+        
+    }
+    
+}

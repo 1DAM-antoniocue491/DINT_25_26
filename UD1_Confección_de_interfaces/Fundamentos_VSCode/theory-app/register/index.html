@@ -12,13 +12,13 @@
     <div class="flex flex-col bg-azul-claro/40 p-20 items-center justify-center rounded-xl">
       <img src="/public/person-circle.svg" alt="Icono persona" class="w-2/6">
       
-      <div class="my-5">
-        <div class="border-2 flex rounded border-azul-oscuro mb-3">
+      <div class="my-5 flex flex-col gap-3">
+        <div class="border-2 flex rounded border-azul-oscuro">
           <img src="/public/person-fill.svg" alt="" class="p-2">
-          <input type="text" placeholder="Username" class="placeholder-azul-oscuro focus:ring-0 focus:outline-none">
+          <input type="text" id="user" placeholder="Username" class="placeholder-azul-oscuro focus:ring-0 focus:outline-none">
         </div>
 
-        <div class="border-2 flex rounded border-azul-oscuro w-auto mb-3">
+        <div class="border-2 flex rounded border-azul-oscuro w-auto">
           <img src="/public/shield-lock-fill.svg" alt="" class="p-2">
           <input type="password" placeholder="Password" id="passwd1" class="w-auto placeholder-azul-oscuro focus:ring-0 focus:outline-none">
           <input type="image" id="eye1" src="/public/eye-fill.svg" alt="" class="p-2" onclick="password1()">
@@ -32,7 +32,7 @@
       </div>
 
       <div>
-        <button class="bg-azul-oscuro w-60 mt-5 text-2xl text-white rounded" >REGISTER</button>
+        <button class="bg-azul-oscuro w-60 mt-5 text-2xl text-white rounded" onclick="submit()">REGISTER</button>
       </div>
     </div>
   </body>
