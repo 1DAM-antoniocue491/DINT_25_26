@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@layer components {
+    .menu {
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        font-size: large;
+        
+    }
+
+    .menu:hover {
+        width: 220px;
+    }
+
+    .menu:hover > .menuIcon {
+        width: 30px;
+    }
+
+    
+}
