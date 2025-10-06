@@ -17,5 +17,25 @@
         width: 30px;
     }
 
-    
+    h1 {
+        text-align: center;
+        margin: 2pc;
+        font-size: xx-large;
+        font-weight: bolder;
+        text-decoration: underline;
+    }
+
+    button {
+        margin-left: 2pc;
+        margin-bottom: 1pc;
+    }
+
+    .no-button-style {
+        margin: 0;
+    }
+
+    .list {
+        margin: 0%;
+        border: 1px solid rgb(184, 184, 184);
+    }
 }
