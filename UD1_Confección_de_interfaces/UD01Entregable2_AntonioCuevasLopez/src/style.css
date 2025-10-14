@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@layer components {
+  .button-home {
+    @apply
+    p-2 bg-gradient-to-r from-teal-200 to-lime-200 rounded-md font-semibold hover:bg-gradient-to-l
+  }
+
+  .card {
+    @apply
+    rounded-xl p-3 bg-white shadow hover:shadow-xl
+  }
+
+  .title_card {
+    @apply
+    font-semibold mb-3 hover:text-pink-600
+  }
+
+  .text_card {
+    @apply
+    text-[14px] text-gray-700
+  }
+
+  .parrafo {
+    @apply
+    mt-8 text-gray-600
+  }
+
+  .resaltado {
+    @apply
+    rounded-md p-0.5 font-bold bg-gray-200 text-gray-800
+  }
+}
