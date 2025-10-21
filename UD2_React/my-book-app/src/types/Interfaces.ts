@@ -4,5 +4,6 @@ export interface IBooks {
     autor: string;
     imagen: string;
     fechaPublicacion: string;
-    state: "Leído"|"Pendiente"|"Sin empezar";
+    state: "Leído"|"Pendiente"
+    categoria: string;
 }
