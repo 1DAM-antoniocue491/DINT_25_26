@@ -6,4 +6,5 @@ export interface IBooks {
     fechaPublicacion: string;
     state: "Leído"|"Pendiente"
     categoria: string;
+    favourite: boolean;
 }

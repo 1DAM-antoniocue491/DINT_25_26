@@ -1,9 +1,12 @@
 import './App.css'
+import React from 'react'
 import type { IBooks } from './types/Interfaces'
 import Library from './pages/Library'
 import Header from './components/Header'
 
 function App() {
+
+  var [dataBooks, setDataBooks] = React.useState<IBooks[]>([]);
 
   const Books: IBooks[] = [
   {
@@ -13,7 +16,8 @@ function App() {
     imagen: "https://m.media-amazon.com/images/I/612JXVmJrKL._UF1000,1000_QL80_.jpg",
     fechaPublicacion: "2023-05-12",
     state: "Leído",
-    categoria: "Fantasía"
+    categoria: "Fantasía",
+    favourite: true
   },
   {
     ISBN: 9781234567001,
@@ -22,7 +26,8 @@ function App() {
     imagen: "https://editorialcirculorojo.com/wp-content/uploads/sombras-en-la-niebla.jpg",
     fechaPublicacion: "2022-08-24",
     state: "Pendiente",
-    categoria: "Misterio"
+    categoria: "Misterio",
+    favourite: false
   },
   {
     ISBN: 9781234567002,
@@ -31,7 +36,8 @@ function App() {
     imagen: "https://m.media-amazon.com/images/I/619s9YZZyCL._UF1000,1000_QL80_.jpg",
     fechaPublicacion: "2021-11-05",
     state: "Pendiente",
-    categoria: "Aventura"
+    categoria: "Aventura",
+    favourite: false
   },
   {
     ISBN: 9781234567003,
@@ -40,7 +46,8 @@ function App() {
     imagen: "https://www.entreletras.eu/wp-content/uploads/2025/04/unnamed-8.jpg",
     fechaPublicacion: "2020-03-15",
     state: "Leído",
-    categoria: "Suspense"
+    categoria: "Suspense",
+    favourite: false
   },
   {
     ISBN: 9781234567004,
@@ -49,7 +56,8 @@ function App() {
     imagen: "https://imagessl5.casadellibro.com/a/l/s5/45/9788419197245.webp",
     fechaPublicacion: "2019-07-22",
     state: "Pendiente",
-    categoria: "Historia"
+    categoria: "Historia",
+    favourite: false
   },
   {
     ISBN: 9781234567005,
@@ -58,7 +66,8 @@ function App() {
     imagen: "https://images.cdn1.buscalibre.com/fit-in/360x360/04/10/0410be3dff53a4285f6e71968869f160.jpg",
     fechaPublicacion: "2018-02-10",
     state: "Leído",
-    categoria: "Infantil"
+    categoria: "Infantil",
+    favourite: false
   },
   {
     ISBN: 9781234567006,
@@ -67,7 +76,8 @@ function App() {
     imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7OOgPNyXx89Wp7J4RK9AeUl81leLpZ-2fWg&s",
     fechaPublicacion: "2017-09-30",
     state: "Leído",
-    categoria: "Terror"
+    categoria: "Terror",
+    favourite: false
   },
   {
     ISBN: 9781234567007,
@@ -76,7 +86,8 @@ function App() {
     imagen: "https://m.media-amazon.com/images/I/81xqiaNWAkL._UF1000,1000_QL80_.jpg",
     fechaPublicacion: "2016-06-18",
     state: "Pendiente",
-    categoria: "Aventura"
+    categoria: "Aventura",
+    favourite: false
   },
   {
     ISBN: 9781234567008,
@@ -85,7 +96,8 @@ function App() {
     imagen: "https://images.cdn3.buscalibre.com/fit-in/360x360/97/a9/97a9e0ef37c3b33e9303147883d03372.jpg",
     fechaPublicacion: "2015-04-25",
     state: "Pendiente",
-    categoria: "Drama"
+    categoria: "Drama",
+    favourite: false
   },
   {
     ISBN: 9781234567009,
@@ -94,7 +106,8 @@ function App() {
     imagen: "https://m.media-amazon.com/images/S/pv-target-images/b6308a567ef29464d38ae06d17d7efc6460dece1f500947ac64df8950e668d27.jpg",
     fechaPublicacion: "2014-12-05",
     state: "Leído",
-    categoria: "Misterio"
+    categoria: "Misterio",
+    favourite: false
   }
 ];
 
