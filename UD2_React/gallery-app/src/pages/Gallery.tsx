@@ -1,51 +1,91 @@
-import React from "react";
-import { Button } from "../components/Button";
-import type Interfaces from "../types/Interfaces";
-import { Card } from "../components/Card";
+import React, { type ChangeEvent } from 'react'
+import Button from '../components/Button'
+import Card from '../components/Card';
+import type { ISculpture } from '../types/Interface';
+import { getCategories, getData, getCountry } from '../data/Api';
 
-interface CardProps {
-    card: Interfaces[];
-}
+export default function Gallery() {
+    // Sculpture per page, cuantas esculturas tiene una pagina
+    const uid = React.useId();
+    const [categories] = React.useState<string[]>(getCategories());
+    const [selectedCategory, setSelectedCategory] = React.useState<string>('Todas');
+    
+    const [countries] = React.useState<string[]>(getCountry());
+    const [selectedCountry, setSelectedCountry] = React.useState<string>('Todas');
 
-export default function Gallery({ card }: CardProps) {
-    var [pos, setPos] = React.useState(0);
+    const [page, setPage] = React.useState<number>(0);
+    const [allData, setAlldata]=React.useState<ISculpture[]>(getData(0, selectedCategory, selectedCountry).sculptures);
+    const [totalPages, setTotalPages] = React.useState<number>(getData(0, selectedCategory, selectedCountry).totalPages);
 
-    function nextCard() {
-        if (pos < card.length - 1) {
-            setPos(pos + 1);
-        }
+    const next = () => {
+        setPage(page+1)
+    }
+    const before = () => {
+        setPage(page-1)
     }
 
-    function prevCard() {
-        if (pos > 0) {
-            setPos(pos - 1);
-        }
+    const handleCategory = (selected: ChangeEvent<HTMLSelectElement>) => {
+        setSelectedCategory(selected.target.value);
+        setPage(0);
     }
+
+    const handleCountry = (selected: ChangeEvent<HTMLSelectElement>) => {
+        setSelectedCountry(selected.target.value);
+        setPage(0);
+    }
+
+    React.useEffect(()=>{
+        const {sculptures, totalPages} = getData(page, selectedCategory, selectedCountry);
+        setAlldata(sculptures)
+        setTotalPages(totalPages)
+    }, [page, selectedCategory, selectedCountry]);
 
     return (
-        <div>
-            <div className="flex flex-row gap-8 justify-center">
-                {
-                    pos > 0 &&
-                    <Button title="Anterior" callback={prevCard} />
-                }
-                <p>({pos+1} de {card.length})</p>
-                {
-                    pos < card.length - 1 &&
-                    <Button title="Siguiente" callback={nextCard} />
-                }
+        <div className='flex flex-col justify-content items-center pt-4'>
+            <div>
+                <label className='font-bold' htmlFor="select">Categoría: </label>
+                <select name='select' className='mb-2 px-3 py-3 border border-gray-300 rounded-lg bg-white text-gray-800 shadow-sm cursor-pointer text-left'
+                value={selectedCategory}
+                onChange={handleCategory}>
+                    {
+                        categories.map((cat, i) =>{
+                            return (<option key={`category-${uid}-${i}`} value={cat}>{cat}</option>);
+                        })
+                    }
+                </select>
+        
+                <label className='font-bold ml-10' htmlFor="select">País: </label>
+                <select name='select' className='mb-2 px-3 py-3 border border-gray-300 rounded-lg bg-white text-gray-800 shadow-sm cursor-pointer text-left'
+                value={selectedCountry}
+                onChange={handleCountry}>
+                    {
+                        countries.map((cat, i) =>{
+                            return (<option key={`country-${uid}-${i}`} value={cat}>{cat}</option>);
+                        })
+                    }
+                </select>
             </div>
 
-            <div className="flex justify-center mt-10">
+            <div className="grid grid-cols-3 gap-4">
                 {
-                    card.map((b, index) => {
-                        return (
-                            index === pos &&
-                            <Card name={b.name} imageUrl={b.url} description={b.description} />
-                        )
+                    allData.map((sc, index)=>{
+                        return <Card key={`card-${uid}-${index}`} data={sc} />
                     })
                 }
             </div>
+            
+            {allData.length === 0 &&
+                <h3 className='font-extralight border bg-red-300 text-red-600 rounded-md text-xl p-4 m-20'>No hay esculturas que coinciden con este filtro</h3>
+            }
+            
+            {allData.length > 0 &&
+                <div className='flex flex-row gap-4 py-4'>
+                    {page > 0 && <Button title='Anterior' callback={before} />}
+                    <h4 className='font-light font-serif p-1'>({page+1} de {totalPages})</h4>
+                    {page < totalPages-1 && <Button title='Siguiente' callback={next} />}
+                </div>
+            }
+            
         </div>
     )
 }

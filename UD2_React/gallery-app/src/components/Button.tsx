@@ -1,10 +1,13 @@
 interface ButtonProps {
-    title: string;
-    callback: () => void;
-}
+    title : string;
+    callback : () => void;
+};
 
-export function Button({ title, callback }: ButtonProps) {
-    return (
-        <button className="rounded-md hover:bg-amber-300 bg-amber-200 px-3 py-1" onClick={callback}>{title}</button>
-    )
+export default function Button({title, callback} : ButtonProps) {
+  return (
+    <button className='rounded-lg bg-amber-200 py-1 px-2 
+    cursor-pointer hover:bg-amber-400' onClick={callback}>
+        {title}
+    </button>
+  )
 }

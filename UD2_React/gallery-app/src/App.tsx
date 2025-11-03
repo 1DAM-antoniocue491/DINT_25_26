@@ -1,15 +1,13 @@
-import './App.css'
-import Header from './components/Header.tsx'
-import Gallery from './pages/Gallery.tsx'
-import { sculptureList } from './data/data.ts'
+import Header from "./components/Header"
+import Gallery from "./pages/Gallery"
 
 function App() {
 
   return (
-    <body className='bg-gray-200'>
+    <>
       <Header />
-      <Gallery card={sculptureList} />
-    </body>
+      <Gallery/>
+    </>
   )
 }
 
