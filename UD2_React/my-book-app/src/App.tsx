@@ -7,10 +7,13 @@ function App() {
 
   return (
     <>
-      <body className='bg-gray-200'>
+    
         <Header/>
+          <label>
+                    Input de texto: <input name="myInput" />
+                </label>
         <Library books={Books}/>
-      </body>
+    
     </>
   )
 }

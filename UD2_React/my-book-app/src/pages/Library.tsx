@@ -44,9 +44,11 @@ export default function Library({ books }: LibraryProps) {
 
         <>
             <div className="flex flex-col gap-10">
+                <label>
+                    Checkbox: <input type="checkbox" name="myCheckbox" defaultChecked={true} />
+                </label>
+                <input name="myInput" defaultValue="Some initial value" />
                 <div>
-                    <input onChange={changeInput} value={nameFilter} className="border" />
-
                     <label htmlFor="select" className="ml-5 font-bold">Filtrado por estado: </label>
                     <select name="select" id="select"
                         value={selectedState}
