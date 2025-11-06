@@ -1,12 +1,19 @@
-import Header from "./components/Header"
 import Gallery from "./pages/Gallery"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import NotFound from "./pages/NotFound"
+import { Routes, Route } from "react-router"
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Gallery/>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/gallery" element={<Gallery />} />
+      <Route path="/about" element={<About />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
     </>
   )
 }

@@ -3,6 +3,7 @@ import Button from '../components/Button'
 import Card from '../components/Card';
 import type { ISculpture } from '../types/Interface';
 import { getCategories, getData, getCountry } from '../data/Api';
+import Header from "../components/Header"
 
 export default function Gallery() {
     // Sculpture per page, cuantas esculturas tiene una pagina
@@ -41,7 +42,10 @@ export default function Gallery() {
     }, [page, selectedCategory, selectedCountry]);
 
     return (
+        <>
+        <Header />
         <div className='flex flex-col justify-content items-center pt-4'>
+            
             <div>
                 <label className='font-bold' htmlFor="select">Categoría: </label>
                 <select name='select' className='mb-2 px-3 py-3 border border-gray-300 rounded-lg bg-white text-gray-800 shadow-sm cursor-pointer text-left'
@@ -87,5 +91,6 @@ export default function Gallery() {
             }
             
         </div>
+        </>
     )
 }
