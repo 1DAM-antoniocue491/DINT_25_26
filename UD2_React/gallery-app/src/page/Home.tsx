@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 
+
 export default function Home() {
   return (
       <section className="relative h-screen bg-[url('https://images.unsplash.com/photo-1518998053901-5348d3961a04?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774')] bg-cover bg-center ">
@@ -13,11 +14,11 @@ export default function Home() {
         <p className="text-lg md:text-xl mb-8 text-white">
           Explora una colección única de obras artísticas que combinan historia y forma.
         </p>
-
-        <Link to="/gallery" className="bg-blue-100 hover:bg-gray-200 text-gray-900 font-semibold py-3 px-6 rounded-lg">
-          Ir a la Galería
+        <Link to="/gallery" className="bg-blue-100 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">
+          Ver galería
         </Link>
+     
       </div>
     </section>
   )
-};
+}

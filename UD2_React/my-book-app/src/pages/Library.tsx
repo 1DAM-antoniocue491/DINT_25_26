@@ -2,20 +2,18 @@ import React, { type ChangeEvent } from "react"
 import Book from "../components/Book"
 import type { IBooks } from "../types/Interfaces"
 import { getData, getState } from "../data/api"
+import Header from '../components/Header'
+import NavBar from '../components/NavBar'
 
-interface LibraryProps {
-    books: IBooks[]
-}
-
-export default function Library({ books }: LibraryProps) {
-    const [book, setBook] = React.useState<number>(0);
+export default function Library() {
 
     const [states] = React.useState<string[]>(getState());
     const [selectedState, setSelectedState] = React.useState<string>("Todos");
-    const [page, setPage] = React.useState<number>(0);
-    const [totalPages, setTotalPages] = React.useState<number>(getData(0, selectedState).totalPages);
-    const [allBooks, setAllBooks] = React.useState<IBooks[]>(getData(page, selectedState).books);
     const [nameFilter, setNameFilter] = React.useState<string>('');
+    const [page, setPage] = React.useState<number>(0);
+    const [totalPages, setTotalPages] = React.useState<number>(getData(0, selectedState, nameFilter).totalPages);
+    const [allBooks, setAllBooks] = React.useState<IBooks[]>(getData(page, selectedState, nameFilter).books);
+
 
     function nextBook() {
         setPage(page + 1);
@@ -30,10 +28,10 @@ export default function Library({ books }: LibraryProps) {
     }
 
     React.useEffect(() => {
-        const data = getData(page, selectedState);
+        const data = getData(page, selectedState, nameFilter);
         setAllBooks(data.books);
         setTotalPages(data.totalPages);
-    }, [page, selectedState]);
+    }, [page, selectedState, nameFilter]);
 
     const handleState = (selected: ChangeEvent<HTMLSelectElement>) => {
         setSelectedState(selected.target.value);
@@ -43,24 +41,30 @@ export default function Library({ books }: LibraryProps) {
     return (
 
         <>
+            <Header />
+            <NavBar />
             <div className="flex flex-col gap-10">
-                <label>
-                    Checkbox: <input type="checkbox" name="myCheckbox" defaultChecked={true} />
-                </label>
-                <input name="myInput" defaultValue="Some initial value" />
-                <div>
-                    <label htmlFor="select" className="ml-5 font-bold">Filtrado por estado: </label>
-                    <select name="select" id="select"
-                        value={selectedState}
-                        onChange={handleState}>
-                        {
-                            states.map((s, index) => {
-                                return (
-                                    <option key={`state-${s}-${index}`} value={s}>{s}</option>
-                                )
-                            })
-                        }
-                    </select>
+                <div className="flex flex-row justify-center items-center">
+                    <div>
+                        <label htmlFor="myInput" className="ml-5 font-bold">
+                            Filtrado por nombre:
+                        </label>
+                        <input className="border-2 rounded-md p-1 ml-2" name="myInput" value={nameFilter} onChange={changeInput}/>
+                    </div>
+                    <div>
+                        <label htmlFor="select" className="ml-5 font-bold">Filtrado por estado: </label>
+                        <select name="select" id="select"
+                            value={selectedState}
+                            onChange={handleState}>
+                            {
+                                states.map((s, index) => {
+                                    return (
+                                        <option key={`state-${s}-${index}`} value={s}>{s}</option>
+                                    )
+                                })
+                            }
+                        </select>
+                    </div>
                 </div>
 
                 <div className="flex justify-center w-full">

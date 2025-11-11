@@ -9,7 +9,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2023-05-12",
     state: "Leído",
     categoria: "Fantasía",
-    favourite: true
+    favourite: true,
+    award: false
   },
   {
     ISBN: 9781234567001,
@@ -19,7 +20,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2022-08-24",
     state: "Pendiente",
     categoria: "Misterio",
-    favourite: false
+    favourite: false,
+    award: true
   },
   {
     ISBN: 9781234567002,
@@ -29,7 +31,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2021-11-05",
     state: "Pendiente",
     categoria: "Aventura",
-    favourite: false
+    favourite: false,
+    award: true
   },
   {
     ISBN: 9781234567003,
@@ -39,7 +42,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2020-03-15",
     state: "Leído",
     categoria: "Suspense",
-    favourite: false
+    favourite: false,
+    award: false
   },
   {
     ISBN: 9781234567004,
@@ -49,7 +53,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2019-07-22",
     state: "Pendiente",
     categoria: "Historia",
-    favourite: false
+    favourite: false,
+    award: true
   },
   {
     ISBN: 9781234567005,
@@ -59,7 +64,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2018-02-10",
     state: "Leído",
     categoria: "Infantil",
-    favourite: false
+    favourite: false,
+    award: true
   },
   {
     ISBN: 9781234567006,
@@ -69,7 +75,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2017-09-30",
     state: "Leído",
     categoria: "Terror",
-    favourite: false
+    favourite: false,
+    award: false
   },
   {
     ISBN: 9781234567007,
@@ -79,7 +86,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2016-06-18",
     state: "Pendiente",
     categoria: "Aventura",
-    favourite: false
+    favourite: false,
+    award: false
   },
   {
     ISBN: 9781234567008,
@@ -89,7 +97,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2015-04-25",
     state: "Pendiente",
     categoria: "Drama",
-    favourite: false
+    favourite: false,
+    award: true
   },
   {
     ISBN: 9781234567009,
@@ -99,7 +108,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2014-12-05",
     state: "Leído",
     categoria: "Misterio",
-    favourite: false
+    favourite: false,
+    award: false
   },
   {
     ISBN: 9781234567010,
@@ -109,7 +119,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2013-09-10",
     state: "Leído",
     categoria: "Romance",
-    favourite: true
+    favourite: true,
+    award: false
   },
   {
     ISBN: 9781234567011,
@@ -119,7 +130,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2012-11-22",
     state: "Pendiente",
     categoria: "Fantasía",
-    favourite: false
+    favourite: false,
+    award: true
   },
   {
     ISBN: 9781234567012,
@@ -129,7 +141,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2011-04-08",
     state: "Leído",
     categoria: "Historia",
-    favourite: false
+    favourite: false,
+    award: false
   },
   {
     ISBN: 9781234567013,
@@ -139,7 +152,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2010-06-19",
     state: "Pendiente",
     categoria: "Terror",
-    favourite: false
+    favourite: false,
+    award: false
   },
   {
     ISBN: 9781234567014,
@@ -149,7 +163,8 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2009-01-15",
     state: "Leído",
     categoria: "Romance",
-    favourite: false
+    favourite: false,
+    award: true
   },
   {
     ISBN: 9781234567015,
@@ -159,6 +174,7 @@ export const Books: IBooks[] = [
     fechaPublicacion: "2008-10-03",
     state: "Pendiente",
     categoria: "Fantasía",
-    favourite: false
+    favourite: false,
+    award: false
   }
 ];

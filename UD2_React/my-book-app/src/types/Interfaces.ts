@@ -7,4 +7,5 @@ export interface IBooks {
     state: "Leído"|"Pendiente"
     categoria: string;
     favourite: boolean;
+    award: boolean;
 }

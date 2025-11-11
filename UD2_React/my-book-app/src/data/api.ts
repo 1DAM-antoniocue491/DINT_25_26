@@ -1,7 +1,9 @@
 import type { IBooks } from '../types/Interfaces'
 import { Books } from '../data/data'
+import type { IArticles } from '../types/ArticlesInterface'
+import { articulosLibros } from '../data/articles'
 
-export function getData(page: number, state: string): {
+export function getData(page: number, state: string, name: string): {
     books: IBooks[], totalPages: number
 } {
 
@@ -10,6 +12,8 @@ export function getData(page: number, state: string): {
 
     const filtered = Books.filter(b =>
         (state === "Todos" || b.state === state)
+        &&
+        (name === '' || b.titulo.toLowerCase().includes(name.toLowerCase()))
     )
 
     const object = {
@@ -18,6 +22,14 @@ export function getData(page: number, state: string): {
     }
 
     return object;
+}
+
+export function getAwards(): IBooks[] {
+    return Books.filter(b => ( b.award === true ));
+}
+
+export function getArticles(): IArticles[] {
+    return articulosLibros;
 }
 
 export function getState() {

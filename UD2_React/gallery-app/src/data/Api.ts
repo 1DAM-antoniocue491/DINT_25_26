@@ -1,36 +1,35 @@
 import type { ISculpture } from "../types/Interface";
 import { sculptureList } from "./Data";
 
-
-export function getData(page : number, category: string, country: string): {
+// page: pagina por la q va
+// sip: Sculpture per page, cuantas esculturas tiene una pagina
+export function getData(page : number, category : string, country : string, sip : number = 3): {
     sculptures : ISculpture[], totalPages: number
 } {
-    const limit = page*3;
-    const offset = limit + 3;
-
-    const filtered = sculptureList.filter(s => 
-        (category === "Todas" || s.category === category) &&
-        (country === "Todas" || s.country === country)
-    );
-
-    const object = {
-        sculptures: filtered.slice(limit, offset),
-        totalPages: Math.ceil(filtered.length / 3)    
+    const filtered : ISculpture[] = sculptureList.filter((sc) =>
+        (category === "Todas" || sc.category === category) 
+        && (country === "Todas" || sc.country === country)
+    )
+    return {
+        sculptures: filtered.slice(page * sip, page*sip+sip), 
+        totalPages: Math.ceil(filtered.length / sip)
     };
+}
 
-    return object;
+export function idExists(id : number) : ISculpture | undefined {
+    const daid = sculptureList.find((s) => s.id == id);
+    return daid;
 }
 
 export function getCategories(){
-    const allCountries : string[] = sculptureList.map((s) => {
+    const allCategory : string[] = sculptureList.map((s) => {
         return s.category
     })
-    return ["Todas",...new Set(allCountries)];
+    return ["Todas",...new Set(allCategory)];
 }
-
-export function getCountry(){
-    const allCountries : string[] = sculptureList.map((s) => {
+export function getCountries(){
+    const allCountry : string[] = sculptureList.map((s) => {
         return s.country
     })
-    return ["Todas",...new Set(allCountries)];
+    return ["Todas",...new Set(allCountry)];
 }

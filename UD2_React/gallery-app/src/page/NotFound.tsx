@@ -10,5 +10,5 @@ export default function NotFound() {
         Volver al inicio
       </Link>
     </main>
-  );
+   );
 }
