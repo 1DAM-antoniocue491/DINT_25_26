@@ -8,4 +8,5 @@ export interface IBooks {
     categoria: string;
     favourite: boolean;
     award: boolean;
+    descripcion: string;
 }

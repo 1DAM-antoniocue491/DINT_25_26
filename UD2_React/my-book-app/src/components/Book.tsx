@@ -1,5 +1,6 @@
 import React from "react";
 import IconButton from "./IconButton";
+import { Link } from "react-router";
 
 interface BookProos {
     ISBN: number;
@@ -32,7 +33,7 @@ export default function Book({ISBN, titulo, autor, imagen, fechaPublicacion, sta
                 <p className="text-md text-gray-500">{autor}</p>
                 <p className="text-md text-gray-500 mb-2">Publicado: {fechaPublicacion}</p>
 
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mb-4">
                     <div className="flex flex-col gap-2">
                         {state === "Leído" && 
                             <button onClick={toggleState} className="w-min px-3 text-sm text-center rounded-2xl text-green-600 font-bold bg-green-200">Leído</button>
@@ -44,6 +45,10 @@ export default function Book({ISBN, titulo, autor, imagen, fechaPublicacion, sta
                     </div>
                     <IconButton status={status} callBack={() => setStatus(!status)} />
                 </div>
+
+                <button  className="border px-3 py-1 rounded-md bg-amber-500 text-white font-bold">
+                    <Link to={`/detail/${ISBN}`}>Más información</Link>
+                </button>
             </div>
         </div>
     )

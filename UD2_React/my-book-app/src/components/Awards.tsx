@@ -1,35 +1,54 @@
 import React from "react"
-import Header from "./Header"
-import ImagenLibro from "../assets/libroImagen.jpg"
+import Book from "../components/Book"
+import type { IBooks } from "../types/Interfaces"
 import { getAwards } from "../data/api"
+import Header from '../components/Header'
 import NavBar from '../components/NavBar'
 
 export default function Awards() {
-    const [awards] = React.useState(getAwards());
+
+    const [page, setPage] = React.useState<number>(0);
+    const [totalPages, setTotalPages] = React.useState<number>(getAwards(page).totalPages);
+    const [allBooks, setAllBooks] = React.useState<IBooks[]>(getAwards(page).books);
+
+
+    function nextBook() {
+        setPage(page + 1);
+    }
+
+    function beforeBook() {
+        setPage(page - 1);
+    }
+
+    React.useEffect(() => {
+        const data = getAwards(page);
+        setAllBooks(data.books);
+        setTotalPages(data.totalPages);
+    }, [page]);
 
     return (
-        <>
-        <Header />
-        <NavBar />
-        <div className="flex flex-col items-center pb-20">
-            <h1 className="text-3xl">Artículos</h1>
 
-            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 md:grid-cols-1">
-                {
-                    awards.map((s) => (
-                        <div className="rounded-2xl shadow-2xl mt-10">
-                            <div className="relative overflow-hidden p-10 rounded-t-2xl">
-                                <img className="absolute inset-0 w-full h-full object-cover z-0" src={ImagenLibro} alt="Imagen" />
-                                <img className="relative z-10 w-40 rounded-2xl" src={s.imagen} alt="Imagen" />
-                            </div>
-                            <div className="p-4">
-                                <p className="text-2xl">{s.titulo}</p>
-                            </div>
-                        </div>
-                    ))
-                }
+        <>
+            <Header />
+            <NavBar />
+            <div className="flex flex-col gap-10">
+                <div className="flex justify-center w-full">
+                    {
+                        allBooks.map((b, index) => {
+                            return (
+                                <Book key={`book-${b.ISBN}-${index}`} ISBN={b.ISBN} titulo={b.titulo} autor={b.autor} imagen={b.imagen} fechaPublicacion={b.fechaPublicacion} state={b.state} categoria={b.categoria} favourite={b.favourite}/>
+                            )
+                        })
+                    }
+                </div>
+
+                <div className="flex flex-row justify-center gap-10 items-center">
+                    {page > 0 && <button onClick={beforeBook} className="py-1 px-3 rounded-2xl font-bold text-white bg-amber-500 hover:bg-amber-400">Before</button>}
+                    <p className="border-2 rounded-full p-2 flex justify-center font-bold bg-amber-100 text-amber-700">{page + 1} de {totalPages}</p>
+                    {page < totalPages - 1 && <button onClick={nextBook} className="py-1 px-3 rounded-2xl font-bold text-white bg-amber-500 hover:bg-amber-400">Next</button>}
+                </div>
             </div>
-        </div>
         </>
     )
 }
+

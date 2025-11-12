@@ -10,7 +10,8 @@ export const Books: IBooks[] = [
     state: "Leído",
     categoria: "Fantasía",
     favourite: true,
-    award: false
+    award: false,
+    descripcion: "“El despertar de la luna” es una novela de fantasía y romance que narra la historia de una joven que descubre un antiguo secreto ligado a la luna y a su propio destino. A medida que aprende a controlar los poderes que despiertan en ella, se ve envuelta en un conflicto entre la luz y la oscuridad, el amor y el deber. Es un relato sobre el autodescubrimiento, la magia y la fuerza interior."
   },
   {
     ISBN: 9781234567001,
@@ -21,7 +22,8 @@ export const Books: IBooks[] = [
     state: "Pendiente",
     categoria: "Misterio",
     favourite: false,
-    award: true
+    award: true,
+    descripcion: "“Sombras en la niebla” es una novela de misterio y suspense que sigue a un protagonista atormentado por recuerdos y secretos ocultos en un pequeño pueblo envuelto en bruma. A medida que la niebla se espesa, también lo hacen las mentiras y los temores que rodean a sus habitantes. Es una historia sobre la verdad, la culpa y la delgada línea entre la realidad y las sombras del pasado."
   },
   {
     ISBN: 9781234567002,
@@ -32,7 +34,8 @@ export const Books: IBooks[] = [
     state: "Pendiente",
     categoria: "Aventura",
     favourite: false,
-    award: true
+    award: true,
+    descripcion: "“La ciudad olvidada” es una novela de aventura y exploración que relata la travesía de un grupo de arqueólogos que descubren una antigua ciudad perdida en medio de la selva. A medida que desentrañan sus secretos y enfrentan peligros desconocidos, se ven obligados a confrontar sus propios miedos y deseos. Es una historia sobre la valentía, la amistad y el poder del conocimiento."
   },
   {
     ISBN: 9781234567003,
@@ -43,7 +46,8 @@ export const Books: IBooks[] = [
     state: "Leído",
     categoria: "Suspense",
     favourite: false,
-    award: false
+    award: false,
+    descripcion: "“El último suspiro” es una novela de suspense y thriller psicológico que sigue a un detective retirado que se ve envuelto en un caso sin resolver que lo persigue desde hace años. A medida que se adentra en la investigación, descubre una red de mentiras, traiciones y oscuros secretos que amenazan con destruirlo todo. Es una historia sobre la redención, la justicia y los límites de la mente humana."
   },
   {
     ISBN: 9781234567004,
@@ -54,7 +58,8 @@ export const Books: IBooks[] = [
     state: "Pendiente",
     categoria: "Historia",
     favourite: false,
-    award: true
+    award: true,
+    descripcion: "“Ecos del pasado” es una novela histórica que narra la vida de una joven en la España del siglo XIX, atrapada entre las tradiciones familiares y los cambios sociales que marcan la época. A través de sus ojos, el lector experimenta los desafíos, las pasiones y las luchas por la libertad y la identidad en un mundo en transformación. Es una historia sobre el amor, la resiliencia y el poder de la memoria."
   },
   {
     ISBN: 9781234567005,
@@ -65,7 +70,8 @@ export const Books: IBooks[] = [
     state: "Leído",
     categoria: "Infantil",
     favourite: false,
-    award: true
+    award: true,
+    descripcion: "“El jardín secreto” es una novela infantil que cuenta la historia de una niña huérfana que descubre un jardín mágico y abandonado en la mansión de su tío. A medida que cuida del jardín y lo devuelve a la vida, también encuentra amistad, alegría y un sentido de pertenencia. Es una historia sobre la naturaleza, la imaginación y el poder curativo del amor y la amistad."
   },
   {
     ISBN: 9781234567006,
@@ -76,7 +82,8 @@ export const Books: IBooks[] = [
     state: "Leído",
     categoria: "Terror",
     favourite: false,
-    award: false
+    award: false,
+    descripcion: "“Voces en la oscuridad” es una novela de terror psicológico que sigue a un grupo de amigos que se reúnen en una cabaña aislada para un fin de semana, solo para descubrir que están siendo acechados por fuerzas sobrenaturales. A medida que la noche avanza, los secretos y miedos más profundos de cada uno salen a la luz, poniendo a prueba su cordura y su amistad. Es una historia sobre el miedo, la supervivencia y los límites de la realidad."
   },
   {
     ISBN: 9781234567007,
@@ -87,7 +94,8 @@ export const Books: IBooks[] = [
     state: "Pendiente",
     categoria: "Aventura",
     favourite: false,
-    award: false
+    award: false,
+    descripcion: "“El viaje del héroe” es una novela de aventura épica que sigue a un joven campesino que descubre que es el elegido para salvar su reino de una amenaza oscura. A lo largo de su viaje, enfrenta desafíos, forma alianzas y descubre su verdadero potencial. Es una historia sobre el coraje, la amistad y la lucha entre el bien y el mal."
   },
   {
     ISBN: 9781234567008,
@@ -98,7 +106,8 @@ export const Books: IBooks[] = [
     state: "Pendiente",
     categoria: "Drama",
     favourite: false,
-    award: true
+    award: true,
+    descripcion: "“La sombra del viento” es una novela dramática que narra la vida de una mujer que lucha por encontrar su lugar en el mundo mientras enfrenta pérdidas, traiciones y secretos familiares. A través de sus experiencias, el lector explora temas de amor, identidad y redención. Es una historia sobre la fuerza del espíritu humano y la búsqueda de la verdad en medio del caos."
   },
   {
     ISBN: 9781234567009,
@@ -109,7 +118,8 @@ export const Books: IBooks[] = [
     state: "Leído",
     categoria: "Misterio",
     favourite: false,
-    award: false
+    award: false,
+    descripcion: "“El código Da Vinci” es una novela de misterio y suspense que sigue a un profesor de simbología que se ve envuelto en una conspiración que involucra secretos ocultos en obras de arte famosas. A medida que descifra pistas y enfrenta peligros, descubre una verdad que podría cambiar la historia tal como la conocemos. Es una historia sobre la fe, el conocimiento y la lucha por la verdad."
   },
   {
     ISBN: 9781234567010,
@@ -120,7 +130,8 @@ export const Books: IBooks[] = [
     state: "Leído",
     categoria: "Romance",
     favourite: true,
-    award: false
+    award: false,
+    descripcion: "“Bajo el cielo estrellado” es una novela romántica que narra la historia de dos almas gemelas que se encuentran en medio de un verano inolvidable. A medida que exploran su conexión y enfrentan los desafíos de la vida, descubren que el amor verdadero puede superar cualquier obstáculo. Es una historia sobre la pasión, la esperanza y la magia de los momentos compartidos bajo un cielo lleno de estrellas."
   },
   {
     ISBN: 9781234567011,
@@ -131,7 +142,8 @@ export const Books: IBooks[] = [
     state: "Pendiente",
     categoria: "Fantasía",
     favourite: false,
-    award: true
+    award: true,
+    descripcion: "Una aventura épica en un mundo mágico lleno de criaturas fantásticas y héroes valientes.",
   },
   {
     ISBN: 9781234567012,
@@ -142,7 +154,8 @@ export const Books: IBooks[] = [
     state: "Leído",
     categoria: "Historia",
     favourite: false,
-    award: false
+    award: false,
+    descripcion: "Una profunda exploración de los eventos que moldearon el mundo moderno."
   },
   {
     ISBN: 9781234567013,
@@ -153,7 +166,8 @@ export const Books: IBooks[] = [
     state: "Pendiente",
     categoria: "Terror",
     favourite: false,
-    award: false
+    award: false,
+    descripcion: "Una novela de terror que te mantendrá al borde de tu asiento."
   },
   {
     ISBN: 9781234567014,
@@ -164,7 +178,8 @@ export const Books: IBooks[] = [
     state: "Leído",
     categoria: "Romance",
     favourite: false,
-    award: true
+    award: true,
+    descripcion: "Una historia de amor que trasciende el tiempo y el espacio."
   },
   {
     ISBN: 9781234567015,
@@ -175,6 +190,7 @@ export const Books: IBooks[] = [
     state: "Pendiente",
     categoria: "Fantasía",
     favourite: false,
-    award: false
+    award: false,
+    descripcion: "Una novela épica que narra las aventuras de un joven mago en un mundo lleno de criaturas mágicas y desafíos.",
   }
 ];

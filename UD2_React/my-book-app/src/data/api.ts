@@ -24,8 +24,18 @@ export function getData(page: number, state: string, name: string): {
     return object;
 }
 
-export function getAwards(): IBooks[] {
-    return Books.filter(b => ( b.award === true ));
+export function getAwards(page: number): {
+    books: IBooks[], totalPages: number
+} {
+    const limit = page*4;
+    const offset = limit + 4;
+
+    const filtered = Books.filter(b => ( b.award === true ));
+
+    return {
+        books: filtered.slice(limit, offset),
+        totalPages: Math.ceil(filtered.length / 4)
+    };
 }
 
 export function getArticles(): IArticles[] {
@@ -38,4 +48,8 @@ export function getState() {
     });
 
     return ["Todos", ...new Set(states)];
+}
+
+export function isbnExists(ISBN : number) : IBooks | undefined {
+    return Books.find((s) => s.ISBN === ISBN);
 }
