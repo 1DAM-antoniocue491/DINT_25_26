@@ -1,8 +1,6 @@
 import type { ISculpture } from "../types/Interface";
 import { sculptureList } from "./Data";
 
-// page: pagina por la q va
-// sip: Sculpture per page, cuantas esculturas tiene una pagina
 export function getData(page : number, category : string, country : string, sip : number = 3): {
     sculptures : ISculpture[], totalPages: number
 } {

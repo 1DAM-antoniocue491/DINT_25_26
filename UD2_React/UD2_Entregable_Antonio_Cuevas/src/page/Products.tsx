@@ -8,7 +8,6 @@ export default function Products() {
     const { id } = useParams()
     const [products] = React.useState(getProducts(Number(id)).products);
 
-    console.log(products);
 
     return (
         <>
