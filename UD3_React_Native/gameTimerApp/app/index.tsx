@@ -1,8 +1,8 @@
 import { MaterialIcons } from "@expo/vector-icons";
-import { Text, View, Image, Pressable, Alert } from "react-native";
+import React, { useState } from "react";
+import { Alert, Image, Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import '../global.css';
-import React, { useState } from "react";
 
 
 export default function Index() {
@@ -29,29 +29,23 @@ export default function Index() {
   React.useEffect(() => {
     if (!btnState) return;
 
+    if (time < 1) {
+      Alert.alert('El juego a terminado', "Has realizado: " + pulsaciones + " pulsaciones", [
+        {text: 'OK'},
+      ]);
+
+      setBtnState(false);
+      setTime(10);
+      setPulsaciones(0);
+      return;
+    }
+
     const timer = setInterval(() => {
-      setTime(prev => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          alert()
-          return 0;
-        }
-        return prev - 1;
-      });
+      setTime(time - 1);
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [btnState]);
-
-  const alert = () => {
-    Alert.alert('El juego a terminado', `Has realizado: `+pulsaciones, [
-      {text: 'OK'},
-    ]);
-
-    setBtnState(false);
-    setTime(10);
-    setPulsaciones(0);
-  }
+  }, [btnState, time]);
 
   return (
     <SafeAreaView className="flex-1 bg-slate-900">
@@ -62,7 +56,11 @@ export default function Index() {
         </View>
 
         <Pressable onPress={sumarPulsacion}>
-          <Image source={require('../assets/images/perfectCookie.png')} alt="Galleta" resizeMode="contain" className="w-80 "/>
+          {
+            ({pressed}) => (
+              <Image source={require('../assets/images/perfectCookie.png')} alt="Galleta" resizeMode="contain" className={`w-80 ${pressed? 'w-72' : ''}`}/>
+            )
+          }
         </Pressable>
 
         {
@@ -77,6 +75,7 @@ export default function Index() {
             <Text className="text-4xl text-white font-bold">Playing</Text>
           </Pressable>
         }
+        
 
         <View className="flex-row gap-40 mt-10">
           <View className="flex-col items-center">
