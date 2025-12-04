@@ -3,21 +3,27 @@ import React, { useState } from "react";
 import { Alert, Image, Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import '../global.css';
+import DifficultySelector from "@/components/DifficultySelector";
 
 
 export default function Index() {
   const [btnState, setBtnState] = useState<boolean>(false);
   const [time, setTime] = useState<number>(10);
   const [pulsaciones, setPulsaciones] = useState<number>(0);
+  const [difficulty, setDifficulty] = useState<string>("normal");
+  const [disabled, setDisabled] = useState<boolean>(true);
+  
 
   const handleButtonStart = () => {
     setBtnState(!btnState);
+    setDisabled(false);
   }
 
   const handleButtonStop = () => {
     setBtnState(!btnState);
     setTime(10);
     setPulsaciones(0);
+    setDisabled(true);
   }
 
   const sumarPulsacion = () => {
@@ -26,16 +32,52 @@ export default function Index() {
     }
   }
 
+  const setDificultad = (dificultad: string) => {
+    switch (dificultad) {
+      case "fácil": {
+        setDifficulty("fácil");
+        setTime(15);
+        break;
+      };
+      case "normal": {
+        setDifficulty("normal");
+        setTime(10);
+        break;
+      };
+      case "difícil": {
+        setDifficulty("difícil");
+        setTime(5);
+        break;
+      };
+    }
+  }
+
   React.useEffect(() => {
     if (!btnState) return;
 
     if (time < 1) {
-      Alert.alert('El juego a terminado', "Has realizado: " + pulsaciones + " pulsaciones", [
+      Alert.alert('El juego a terminado', "Has realizado: " + pulsaciones + " pulsaciones \n\nMODO DE JUEGO: " + difficulty, [
         {text: 'OK'},
       ]);
 
       setBtnState(false);
-      setTime(10);
+
+      switch (difficulty) {
+        case "fácil": {
+          setTime(15);
+          break;
+        };
+        case "normal": {
+          setTime(10);
+          break;
+        };
+        case "difícil": {
+          setTime(5);
+          break;
+        };
+      }
+
+      setDisabled(true);
       setPulsaciones(0);
       return;
     }
@@ -54,6 +96,8 @@ export default function Index() {
           <MaterialIcons name="touch-app" size={35} color={'#5ee9b5'} />
           <Text className="text-emerald-300 text-5xl font-bold">Press the cookie</Text>
         </View>
+
+        <DifficultySelector difficulty={difficulty} selectMode={setDificultad} disabled={true} />
 
         <Pressable onPress={sumarPulsacion}>
           {
