@@ -4,3 +4,10 @@ export type Category = {
   endpoint: string;
   icon: string;
 };
+
+export type Movie = {
+  id: number;
+  title: string;
+  posterURL: string;
+  imdbId: string;
+}

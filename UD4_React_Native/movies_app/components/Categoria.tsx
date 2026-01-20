@@ -22,7 +22,13 @@ export default function Categoria( props : CategoryProps ) {
                         <Text className="text-white">Ver películas</Text>
                     </View>
                 </View>
-                 <Link href={{ pathname: `/${props.name}`, params: { endpoint: props.endpoint } }} as RelativePathString} className="rounded-lg" asChild>
+                 <Link href={{ 
+                    pathname: "/[id]", 
+                    params: { 
+                        id: props.name,
+                        endpoint: props.endpoint 
+                        } 
+                    }}  className="rounded-lg" asChild>
                     <Ionicons name="chevron-forward" size={24} color="white" className="ml-auto bg-gray-700 p-4 rounded-full" />
                 </Link>
             </View>
